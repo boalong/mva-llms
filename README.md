@@ -1,8 +1,31 @@
 # MVA Project: The Tuned Lens
 
-To run the notebook in the `prompting` folder, create a .env file at the root of this repository for your HuggingFace token. You will need an access to Llama-3 in order to run the notebook.
+This is the project of the Group 25 for the LLM course at the MVA. The authors are:
+* Omar Arbi
+* Mouad Id Sougou
+* Adrien Letellier
+* Jad Zakharia
 
-Then you have to install our debugged version of the `tuned-lens` library. From the `tuned-lens` folder of this repository, do:
+In this repository you will find a reproduction of the Tuned Lens method described in the article [Eliciting Latent Predictions from Transformers with the Tuned Lens](https://arxiv.org/abs/2303.08112), and some applications.
+
+## Structure of the repository
+
+In the `reproducing` folder, you will find:
+* modules to reproduce the method of the article on the trivial addition task in the `with_classes` folder.
+* a notebook that does the same in a self-contained way in the `self_contained` folder.
+
+In the `experiments` folder, you will find:
+* a `Llama_thinks_eng.ipynb` notebook appying the tuned lens to the translation setting to see if the model uses an English internal representation, as in the article [Do Llamas Work in English? On the Latent Language of Multilingual Transformers](https://aclanthology.org/2024.acl-long.820/). 
+* a `yes_no_llama3.ipynb` notebook that attempts to see if the model uses intermediate layers to have a rough representation of what it will output and the last layers to format it, by playing the game "Yes, no, black, white" ("Ni oui, ni non" in French) with the LLM.
+
+To run the notebooks in the `experiments` folder, you can install our debugged version of the `tuned-lens` library. First, clone the repository using:
+```bash
+git clone https://github.com/boalong/mva-llms-tuned-lens.git
 ```
+
+Then, from the root of this cloned repository, do:
+```bash
 pip install .
 ```
+
+In order to run these experiments using the Llama-3 model, you need to create a .env file at the root of this repository for your HuggingFace token.
