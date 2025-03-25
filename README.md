@@ -17,15 +17,8 @@ In the `reproducing` folder, you will find:
 In the `experiments` folder, you will find:
 * a `Llama_thinks_eng.ipynb` notebook appying the tuned lens to the translation setting to see if the model uses an English internal representation, as in the article [Do Llamas Work in English? On the Latent Language of Multilingual Transformers](https://aclanthology.org/2024.acl-long.820/). 
 * a `yes_no_llama3.ipynb` notebook that attempts to see if the model uses intermediate layers to have a rough representation of what it will output and the last layers to format it, by playing the game "Yes, no, black, white" ("Ni oui, ni non" in French) with the LLM.
-
-To run the notebooks in the `experiments` folder, you can install our debugged version of the `tuned-lens` library. First, clone the repository using:
-```bash
-git clone https://github.com/boalong/mva-llms-tuned-lens.git
-```
-
+To run this notebook in the `experiments` folder, you can install our debugged version of the `tuned-lens` library. First, clone the repository using:
+`git clone https://github.com/boalong/mva-llms-tuned-lens.git`
 Then, from the root of this cloned repository, do:
-```bash
-pip install .
-```
-
-In order to run these experiments using the Llama-3 model, you need to create a .env file at the root of this repository for your HuggingFace token.
+`pip install .`
+* a `Prompt injection` folder, in which you will find a README detailing the instructions for this experiment. In this folder, we attempted to reproduce and extend some experiments of the original article to detect prompt injection.
