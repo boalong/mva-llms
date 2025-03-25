@@ -13,6 +13,7 @@ In this repository you will find a reproduction of the Tuned Lens method describ
 In the `reproducing` folder, you will find:
 * modules to reproduce the method of the article on the trivial addition task in the `with_classes` folder.
 * a notebook that does the same in a self-contained way in the `self_contained` folder.
+* a `Tuned Lens` folder which reproduces the method on a GPT-2 model. More detailed instructions are available in the readme.
 
 In the `experiments` folder, you will find:
 * a `Llama_thinks_eng.ipynb` notebook appying the tuned lens to the translation setting to see if the model uses an English internal representation, as in the article [Do Llamas Work in English? On the Latent Language of Multilingual Transformers](https://aclanthology.org/2024.acl-long.820/). 
